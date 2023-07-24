@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Config 3.0//EN"
+  "http://mybastis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.board">
+	<resultMap id="boardMap" type="boardVO">
+		<id property="no" column="no"></id>
+		<result property="title" column="title"/>
+		<result property="content" column="content"/>
+		<result property="writer" column="writer"/>
+		<result property="count" column="count"/>
+		<result property="date" column="date"/>
+	</resultMap>
+	
+	<select id="selectAll" resultMap="boardMap" resultType="boardVO">
+		<![CDATA[
+			select * from board
+		]]>
+	</select>
+	
+	<select id="insert" parameterType="boardVO">
+		<![CDATA[
+			insert into board(title,content,writer) values (#{title}, #{content}, #{writer})
+		]]>
+	</select>
+	
+	<select id="delete" parameterType="java.lang.Integer">
+		<![CDATA[
+			delete from board where no = #{no}
+		]]>
+	</select>
+	
+	<select id="select" resultMap="boardMap" resultType="boardVO">
+		<![CDATA[
+			select * from board where no = #{no}
+		]]>
+	</select>
+	
+	<select id="count" parameterType="java.lang.Integer">
+		<![CDATA[
+			update board set count = count + 1 where no=#{no}
+		]]>
+	</select>
+
+</mapper>

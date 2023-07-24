@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Config 3.0//EN"
+  "http://mybastis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.user">
+	<resultMap id="userMap" type="userVO">
+		<id property="no" column="no"></id>
+		<result property="id" column="id"/>
+		<result property="pwd" column="pwd"/>
+	</resultMap>
+	
+<!--회원가입	 -->
+	<select id="signup" parameterType="userVO">
+		<![CDATA[
+			insert into user(id, pwd) values(#{id}, #{pwd});
+		]]>
+	</select>
+	
+<!-- 회원가입 중복 확인  -->
+	<select id="compare" parameterType="userVO" resultType="int">
+		<![CDATA[
+			select count(*) from user where id = #{id};
+		]]>
+	</select>
+	
+<!-- 로그인 -->
+	<select id="login" parameterType="userVO" resultType="userVO" resultMap="userMap">
+		<![CDATA[
+			select * from user where id = #{id} and pwd = #{pwd};
+		]]>
+	</select>
+<!-- 유저 정보 출력 -->
+<!-- 	<select id="searchAll" resultMap="userVO", resultType="userVO">
+		<![CDATA[
+			select * from user
+		]]>
+	</select> -->
+</mapper>
