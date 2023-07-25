@@ -36,7 +36,7 @@
 	  					<beans:property name="viewClass" 
 	  					value="org.springframework.web.servlet.view.tiles2.TilesView"></beans:property>
 	</beans:bean>
-	<context:component-scan base-package="bitedu.bipa.tiles" />
+	<context:component-scan base-package="bitedu.bipa.tilesKMS" />
 	
 	
 	

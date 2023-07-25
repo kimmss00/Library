@@ -4,9 +4,9 @@
  
 <configuration>
 	<typeAliases>
-		<typeAlias type="bitedu.bipa.tiles.vo.BoardVO" alias="boardVO"></typeAlias>
-		<typeAlias type="bitedu.bipa.tiles.vo.UserVO" alias="userVO"></typeAlias>
-		<typeAlias type="bitedu.bipa.tiles.vo.BookVO" alias="bookVO"></typeAlias>
+		<typeAlias type="bitedu.bipa.tilesKMS.vo.BoardVO" alias="boardVO"></typeAlias>
+		<typeAlias type="bitedu.bipa.tilesKMS.vo.UserVO" alias="userVO"></typeAlias>
+		<typeAlias type="bitedu.bipa.tilesKMS.vo.BookVO" alias="bookVO"></typeAlias>
 	</typeAliases>
 	
 </configuration>

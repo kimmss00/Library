@@ -1,4 +1,4 @@
-<%@page import="bitedu.bipa.tiles.vo.BookVO"%>
+<%@page import="bitedu.bipa.tilesKMS.vo.BookVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>

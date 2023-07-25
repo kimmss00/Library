@@ -1,4 +1,4 @@
-<%@page import="bitedu.bipa.tiles.vo.BoardVO"%>
+<%@page import="bitedu.bipa.tilesKMS.vo.BoardVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -39,7 +39,7 @@
 <tr><th colspan = "2" id="form">방명록 등록</th></tr>
 	<tr>
 		<td>번호</td>
-		<td><input type="text" name="no" disabled="disabled"></td>
+		<td><input type="text" name="seq" disabled="disabled"></td>
 	</tr>
 	<tr>
 		<td>제목</td>

@@ -1,4 +1,4 @@
-<%@page import="bitedu.bipa.tiles.vo.BoardVO"%>
+<%@page import="bitedu.bipa.tilesKMS.vo.BoardVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -25,12 +25,12 @@
 			<td></td>
 		<c:forEach var="board" items="${list}">
 			<tr>
-				<td>${board.no}</td>
-				<td><a href='view_detail.do?no=${board.no}'>${board.title}</a></td>
+				<td>${board.seq}</td>
+				<td><a href='view_detail.do?seq=${board.seq}'>${board.title}</a></td>
 				<td>${board.writer}</td>
-				<td>${board.count}</td>
-				<td>${board.date}</td>
-				<td><a href="remove.do?no=${board.no}">삭제</a></td>
+				<td>${board.read_count}</td>
+				<td>${board.create_date}</td>
+				<td><a href="remove.do?seq=${board.seq}">삭제</a></td>
 		</c:forEach>
 		<tr><td colspan="6"><a href="view_regist.do"><button>등록</button></a>
 	</table>

@@ -45,11 +45,6 @@
 			insert into book_copy(book_isbn,book_image) values (#{isbn},#{bookImage});
 		]]>	
 	</select>
-	<select id="selectPageList" resultMap = "bookMap" resultType="bookVO" parameterType="hashmap">
-		<![CDATA[
-			select a.*, b.* from book_info a inner join book_copy b on a.book_isbn=b.book_isbn limit ${index},${group};
-		]]>
-	</select>
 	
 	<select id="selectTotalCount" resultType="int">
 		select count(*) from book_info a join book_copy b on a.book_isbn = b.book_isbn;

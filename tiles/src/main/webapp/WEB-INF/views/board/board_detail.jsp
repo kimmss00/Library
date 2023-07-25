@@ -1,5 +1,5 @@
-<%@page import="bitedu.bipa.tiles.utils.DateCalculation"%>
-<%@page import="bitedu.bipa.tiles.vo.BoardVO"%>
+<%@page import="bitedu.bipa.tilesKMS.utils.DateCalculation"%>
+<%@page import="bitedu.bipa.tilesKMS.vo.BoardVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -34,13 +34,13 @@
 			<th>제목</th>
 			<td>${board.title}</td>
 			<th>작성일</th>
-			<td>${board.date}</td>
+			<td>${board.create_date}</td>
 		</tr>
 		<tr>
 			<th>작성자</th>
 			<td>${board.writer}</td>
 			<th>조회수</th>
-			<td>${board.count}</td>
+			<td>${board.read_count}</td>
 		</tr>
 		<tr>
 			<td colspan="4">${board.content}</td>
